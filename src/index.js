@@ -1,8 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './index.scss';
+import axios from 'axios'; 
+import A from './A';
+import B from './B';
 
-ReactDOM.render(<h1>12345</h1>, document.getElementById('root'));
-registerServiceWorker();
+
+function fun(a, b) {
+  a+b
+}
+
+function fun(a, b) {
+  a + b
+}
+
+function fun(a, b) {
+  a + b
+}
+
+function fun(a, b) {
+  a + b
+}
+
+export default () => {
+  console.log(1)
+}
