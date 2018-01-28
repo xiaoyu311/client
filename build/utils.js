@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const prod = process.env.NODE_ENV === 'production';
+const path = require('path');
 
 exports.styleLoaders = env => {
   const extractLess = new ExtractTextPlugin({
@@ -73,7 +74,8 @@ exports.fileLoaders = env => {
       loader: 'file-loader',
       options: {
         name: '[name]-[hash:5].[ext]',
-        outputPath: '../dist/',
+        useRelativePath: true,
+        outputPath: path.resolve(__dirname, 'dist'),
       }
     }]
     : [{
@@ -82,7 +84,7 @@ exports.fileLoaders = env => {
         name: '[name]-[hash:5].[ext]',
         limit: 10000,
         publicPath: '',
-        outputPath: '../dist/',
+        outputPath: 'dist/',
         useRelativePath: true
       }
     }].concat(

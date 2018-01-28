@@ -1,25 +1,7 @@
-import './index.scss';
-import axios from 'axios'; 
-import A from './A';
-import B from './B';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-
-function fun(a, b) {
-  a+b
-}
-
-function fun(a, b) {
-  a + b
-}
-
-function fun(a, b) {
-  a + b
-}
-
-function fun(a, b) {
-  a + b
-}
-
-export default () => {
-  console.log(1)
-}
+ReactDOM.render(
+  <h1>hello world</h1>,
+  document.getElementById('root')
+)
